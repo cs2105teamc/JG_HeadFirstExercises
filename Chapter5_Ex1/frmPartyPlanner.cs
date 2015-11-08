@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Chapter5_Ex1
+namespace Chapter6_Ex1
 {
     public partial class frmPartyPlanner : Form
     {

@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{30267CC8-D946-4A34-A14C-79B22527F0AA}</ProjectGuid>
+    <ProjectGuid>{CE021C43-6344-49A7-9005-7B9FEACE587F}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Chapter5_Ex1</RootNamespace>
@@ -46,7 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="BirthdayParty.cs" />
     <Compile Include="DinnerParty.cs" />
     <Compile Include="frmPartyPlanner.cs">
       <SubType>Form</SubType>

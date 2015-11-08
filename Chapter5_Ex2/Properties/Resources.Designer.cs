@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Chapter5_Ex1.Properties
+namespace Chapter6_Ex1.Properties
 {
 
 

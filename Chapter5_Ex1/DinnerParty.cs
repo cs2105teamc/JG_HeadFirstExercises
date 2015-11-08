@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Chapter5_Ex1
+namespace Chapter6_Ex1
 {
     class DinnerParty
     {

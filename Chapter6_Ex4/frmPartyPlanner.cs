@@ -13,12 +13,23 @@ namespace Chapter6_Ex1
     public partial class frmPartyPlanner : Form
     {
         DinnerParty dinnerParty;
+        BirthdayParty birthdayParty;
 
         public frmPartyPlanner()
         {
             InitializeComponent();
             dinnerParty = new DinnerParty((int)nudNumberOfPeople.Value, cbHealthy.Checked, cbFancy.Checked);
             DisplayDinnerPartyCost();
+
+            birthdayParty = new BirthdayParty((int)nudBirthday.Value, cbFancyBirthday.Checked, tbCakeWriting.Text);
+            DisplayBirthdayPartyCost();
+        }
+
+        private void DisplayBirthdayPartyCost()
+        {
+            lbTooLong.Visible = birthdayParty.CakeWritingTooLong;
+            decimal cost = birthdayParty.Cost;
+            tbBirthdayCost.Text = cost.ToString("c");
         }
 
         private void DisplayDinnerPartyCost()
@@ -43,6 +54,24 @@ namespace Chapter6_Ex1
         {
             dinnerParty.HealthyOption = cbHealthy.Checked;
             DisplayDinnerPartyCost();
+        }
+
+        private void nudBirthday_ValueChanged(object sender, EventArgs e)
+        {
+            birthdayParty.NumberOfPeople = (int)nudBirthday.Value;
+            DisplayBirthdayPartyCost();
+        }
+
+        private void cbFancyBirthday_CheckedChanged(object sender, EventArgs e)
+        {
+            birthdayParty.FancyDecorations = cbFancyBirthday.Checked;
+            DisplayBirthdayPartyCost();
+        }
+
+        private void tbCakeWriting_TextChanged(object sender, EventArgs e)
+        {
+            birthdayParty.CakeWriting = tbCakeWriting.Text;
+            DisplayBirthdayPartyCost();
         }
     }
 }
